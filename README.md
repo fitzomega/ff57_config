@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/fitzomega/ff57_config/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Firefox stuff
 
-### Markdown
+1. firefox sync account. (in the settings)
+    This is to let you synchronize stuff.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+2. Test pilot
+    https://testpilot.firefox.com/experiments
+    Quite good stuff : 
+        Min Vid is great
+        Tab Center was amazing but it got retired (to fix bugs and stuff)
+        other can be good / I don't really use it.
+    
+3. Other addons
+    https://addons.mozilla.org/en-US/firefox/user/eff-technologists/?src=api
+    - HTTPS Everywhere
+    - Privacy Badger
+    
+    https://addons.mozilla.org/en-US/firefox/user/gorhill/?src=api
+    - uBlock Origin
 
-```markdown
-Syntax highlighted code block
+    https://addons.mozilla.org/en-US/firefox/user/piro-piro_or/?src=api
+    This guy is just freaking amazing. Instant fan 
+    - Tree Style Tab
+        F1 to toggle the tab. (Don't forget it's the same panel than bookmarks/history :d)
+        You can switch to black in the addons setting. Frankly I would prefer it a little bit lighter.
+    - Multiple Tab Handler
+        Cause now you want to move your tabs in groups :3
 
-# Header 1
-## Header 2
-### Header 3
+4. userChrome.css
+    - to put in ~/.mozilla/firefox/<randomstring>.default/chrome 
+    chrome folder probably won't exist though.
 
-- Bulleted
-- List
+5. userContent.css
+    same as userChrome.css
+    
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fitzomega/ff57_config/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+I think I didn't forget anything? :/ Dunno really
+Still a work in progress :)
