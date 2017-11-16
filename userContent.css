@@ -1,0 +1,122 @@
+/* ============== */
+/*   TST styles   */
+/* ============== */
+/* Author : Straige
+ * https://gist.github.com/strayge
+ * https://gist.github.com/strayge/41e08ca3e03b5471aebd8d3bcf27c812 
+ */
+
+/* unread tabs */
+.tab.unread .label {
+  /*color: #900;*/
+  font-style: italic;
+}
+
+/* unloaded/pending/discarded tabs */
+.tab.discarded .label {
+  opacity: 0.65;
+  /* color: #444;
+  font-style: italic;*/
+} 
+
+/* tab height, color */
+.tab {
+  background-color: #353535 !important; 
+  border-color: #424242 !important;
+  color: #eee !important;
+}
+
+.tab.active {
+  background-color: #757575 !important;
+  color: #fff !important;
+}
+
+/* hover */
+.tab.active:hover {
+  background-color: #888 !important;
+}
+.tab:hover {
+  background-color: #424242 !important;
+}
+
+/* Show scrollbar in the tab bar rightside #1362 */
+:root.left #tabbar {
+  direction: ltr;
+}
+
+/* hide? new tab button*/
+#tabbar:not(.overflow) .after-tabs {
+  display: none;
+}
+
+/* Only show tab close button on hover */
+.tab:not(:hover) .closebox {
+  display: none;
+}
+
+/* hide bottom scroll */
+:root.left #tabbar,
+#tabContextMenu,
+#tabContextMenu ul {
+  margin-bottom: -17px;
+}
+
+/* Add private browsing indicator per tab
+.tab.private-browsing .label:before {
+  content: "🕶";
+}
+*/
+
+
+
+/* ============ */
+/* Dark loading */
+/* ============ */
+
+/*Author Antabaka
+ * https://www.reddit.com/user/Antabaka 
+ * https://www.reddit.com/r/firefox/comments/6s2l0w/removing_the_white_flash_before_a_page_loads/dl9t14q/
+ */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Removes problem with uBlock picker */
+@-moz-document url-prefix(about:blank), url-prefix(about:newtab) {
+  html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
+    background: #323234 !important;
+  }
+}
+
+
+/* Change the color of about:newtab and about:home that gets loaded on each tab*/
+@-moz-document url(about:newtab),
+               url(about:home) {
+   body{
+       background-color:#424242!important;
+       color:#D1D1D1!important;
+      }
+   .card,
+   .prefs-pane .sidebar {
+      background-color:#303030!important;
+   }
+   #snippets,
+   .section-title,
+   .snippetContainer {
+      color: #AEAEAE!important;
+   }
+   .contentSearchSuggestionTable,
+   .contentSearchSuggestionsList{
+      color:black!important;
+   }
+   .display-item {color: #D1D1D1!important;}
+   #aboutMozilla::before {filter:invert(100%)!important;}
+   #searchText{
+      background:#474749!important;
+      border-radius: 4px;
+      border: 1px solid #262627;
+      box-shadow: none;
+   }
+   #searchSubmit,
+   #launcher {display:none!important;}
+} 
+
+

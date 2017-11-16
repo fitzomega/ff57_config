@@ -1,0 +1,55 @@
+/* ============== */
+/* userChrome.css */
+/* ============== */
+/* Author : Straige
+ * https://gist.github.com/strayge
+ * https://gist.github.com/strayge/41e08ca3e03b5471aebd8d3bcf27c812 
+ */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* remove white flash when loading */
+@-moz-document url(chrome://browser/content/browser.xul)
+{
+   #main-window,
+   browser[type="content-primary"],
+   browser[type="content"],
+   tabbrowser#content,
+   #content,
+   browser[type="content"] > html
+   {
+      background: #424242 !important;
+   }
+}
+
+/* Remove horizontal tabs */
+#tabbrowser-tabs {
+visibility: collapse;
+}
+
+/* tab panel narrower */
+#sidebar, #sidebar-header {
+  min-width: 46px !important;
+}
+
+/* Minimize sidebar header to a light blue stripe (except Bookmarks, History, Sync'd Tabs); appears normally on hover */
+#sidebar-box:not([sidebarcommand="viewBookmarksSidebar"]):not([sidebarcommand="viewHistorySidebar"]):not([sidebarcommand="viewTabsSidebar"])
+  #sidebar-header:not(:hover) {
+    max-height: 5px !important;
+    min-height: 5px !important;
+    padding: 0 !important;
+    background-color: #333 !important;
+    opacity: 1 !important;
+}
+#sidebar-box:not([sidebarcommand="viewBookmarksSidebar"]):not([sidebarcommand="viewHistorySidebar"]):not([sidebarcommand="viewTabsSidebar"])
+  #sidebar-header:not(:hover) #sidebar-switcher-target {
+    /* BAD NEWS: display: none !important; */
+    opacity: 0 !important;
+}
+
+/* darker border and background for sidebar header */
+#sidebar-header {
+  background-color: #838689 !important;
+  border-color: #333 !important;
+}
+
